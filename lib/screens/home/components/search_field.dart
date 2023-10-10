@@ -12,21 +12,27 @@ class SearchField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: SizeConfig.screenWidth * 0.6,
+       margin: EdgeInsets.all(getProportionateScreenWidth(1)),
+      padding: EdgeInsets.symmetric(
+       horizontal: getProportionateScreenWidth(10),
+        vertical: getProportionateScreenWidth(10),
+      ),
       decoration: BoxDecoration(
         color: kSecondaryColor.withOpacity(0.1),
         borderRadius: BorderRadius.circular(15),
       ),
-      child: TextField(
-        onChanged: (value) => print(value),
-        decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(
-                horizontal: getProportionateScreenWidth(20),
-                vertical: getProportionateScreenWidth(9)),
-            border: InputBorder.none,
-            focusedBorder: InputBorder.none,
-            enabledBorder: InputBorder.none,
-            hintText: "Search product",
-            prefixIcon: Icon(Icons.search)),
+      child: Text.rich
+      (  
+         TextSpan(
+          style: TextStyle(
+            color:kPrimaryColor, 
+           fontSize: getProportionateScreenWidth(22),
+            fontWeight: FontWeight.bold,
+            
+            ),
+         text: 'MMM Self service',
+          
+          )
       ),
     );
   }

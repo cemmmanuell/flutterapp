@@ -128,7 +128,7 @@ class _SignFormState extends State<SignForm> {
           removeError(error: kEmailNullError);
         } else if (emailValidatorRegExp.hasMatch(value)) {
           removeError(error: kInvalidEmailError);
-        }
+        } 
         return null;
       },
       validator: (value) {

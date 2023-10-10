@@ -20,8 +20,9 @@ class HomeHeader extends StatelessWidget {
         children: [
           SearchField(),
           IconBtnWithCounter(
-            svgSrc: "assets/icons/Cart Icon.svg",
+            svgSrc: "assets/icons/Mail.svg",
             press: () => Navigator.pushNamed(context, CartScreen.routeName),
+            numOfitem: 40,
           ),
           IconBtnWithCounter(
             svgSrc: "assets/icons/Bell.svg",

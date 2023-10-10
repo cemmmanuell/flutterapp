@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/components/default_button.dart';
+import 'package:shop_app/constants.dart';
 
 import '../../../size_config.dart';
 
@@ -25,14 +27,26 @@ class DiscountBanner extends StatelessWidget {
         TextSpan(
           style: TextStyle(color: Colors.white),
           children: [
-            TextSpan(text: "A Summer Surpise\n"),
-            TextSpan(
-              text: "Cashback 20%",
-              style: TextStyle(
-                fontSize: getProportionateScreenWidth(24),
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            TextSpan(text: "Good morning \n"),
+       WidgetSpan(
+       
+          child: IconTheme(
+          data: new IconThemeData(
+          color: kPrimaryColor), 
+          child: new Icon(Icons.work_history),
+        
+        ),
+      ),
+       TextSpan(
+           text: "08:00 AM",
+              
+          style: TextStyle(
+          fontSize: getProportionateScreenWidth(20),
+                
+           fontWeight: FontWeight.bold,
+          ),
+        )
+          
           ],
         ),
       ),
